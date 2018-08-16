@@ -1,0 +1,22 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    buildscript {
+        ext {
+            springBootVersion = '2.0.2.RELEASE'
+            postreSqlVersion = '42.2.2'
+            swaggerVersion = '2.9.2'
+        }
+        repositories {
+            mavenCentral()
+        }
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
